@@ -5,7 +5,6 @@ import java.util.*;
 public class PyramidBuilder {
     public int[][] buildPyramid(List<Integer> inputNumbers) throws CannotBuildPyramidException {
         int size = inputNumbers.size();
-        int index = 0;
         int row = numberOfRows(size);
         int col = 2 * row - 1;
         int[][] result = new int[row][col];
@@ -13,6 +12,7 @@ public class PyramidBuilder {
         Collections.sort(inputNumbers);
 
         for (int i = 0; i < row; i++) {
+            int index = 0;
             for (int j = row - i - 1; j < row + i; j += 2) {
                 result[i][j] = inputNumbers.get(index++);
             }

@@ -19,14 +19,11 @@ public class PyramidBuilder {
         }
         return result;
     }
-    private static int numberOfRows(int size) throws CannotBuildPyramidException {
+    private static int numberOfRows(int size) {
         double result = (Math.sqrt(1 + 8 * size) - 1) / 2;
 
-        if (size == 0) {
-            return 0;
-
-        } else if (result == Math.ceil(result)) {
-            return (int) result;
+        if (result - (int) result != 0.0) {
+            throw new CannotBuildPyramidException();
         }
         return (int) result;
     }

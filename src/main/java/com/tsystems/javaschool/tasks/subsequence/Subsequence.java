@@ -8,10 +8,11 @@ public class Subsequence {
         int countX = 0;
         if (x == null || y == null) {
             throw new IllegalArgumentException();
-            
+
         } else if (x.isEmpty()) {
             return true;
         }
+
         for (Object o : y) {
             if (o.equals(x.get(countX)) && ++countX == x.size()) {
                 return true;

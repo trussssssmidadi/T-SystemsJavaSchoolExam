@@ -22,9 +22,12 @@ public class PyramidBuilder {
     private static int numberOfRows(int size) throws CannotBuildPyramidException {
         double result = (Math.sqrt(1 + 8 * size) - 1) / 2;
 
-        if (result == Math.ceil(result)) {
+        if (size == 0) {
+            return 0;
+
+        } else if (result == Math.ceil(result)) {
             return (int) result;
         }
-        return 0;
+        return (int) result;
     }
 }

@@ -8,7 +8,8 @@ public class Subsequence {
         int countX = 0;
         if (x == null || y == null) {
             throw new IllegalArgumentException();
-        } else if (x.isEmpty() || y.isEmpty()) {
+            
+        } else if (x.isEmpty()) {
             return true;
         }
         for (Object o : y) {

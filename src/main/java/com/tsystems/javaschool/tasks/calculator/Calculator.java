@@ -18,6 +18,7 @@ public class Calculator {
             return null;
         }
     }
+
     private static String inputToNotation(String input) {
         StringBuilder current = new StringBuilder();
         Stack<Character> stack = new Stack<>();
